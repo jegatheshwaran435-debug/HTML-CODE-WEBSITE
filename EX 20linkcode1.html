@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video & Audio Program</title>
+
+<style>
+body{
+  background:black;
+  color:white;
+  font-family:monospace;
+  padding:20px;
+}
+
+.container{
+  display:flex;
+  gap:20px;
+}
+
+.code{
+  width:50%;
+  background:black;
+  padding:15px;
+  border:2px solid green;
+}
+
+.code span{
+  display:block;
+  color:green;
+  opacity:0;
+  animation:show 0.4s forwards;
+  animation-delay: calc(var(--line) * 0.3s);
+}
+
+.output{
+  width:50%;
+  background:white;
+  padding:15px;
+  color:black;
+}
+
+.explain{
+  margin-top:20px;
+  background:gray;
+  padding:15px;
+  border-left:5px solid cyan;
+}
+
+.explain p{
+  opacity:0;
+  animation:show 0.4s forwards;
+  animation-delay: calc(var(--exp) * 0.4s);
+}
+
+@keyframes show{
+  from{opacity:0; transform:translateY(-5px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<h2>VIDEO & AUDIO USING HTML</h2>
+
+<div class="container">
+
+  <div class="code">
+    <span style="--line:1">&lt;!DOCTYPE html&gt;</span>
+    <span style="--line:2">&lt;html&gt;</span>
+    <span style="--line:3">&lt;head&gt;</span>
+    <span style="--line:4">  &lt;style&gt;</span>
+    <span style="--line:5">    * { background-color:white; }</span>
+    <span style="--line:6">  &lt;/style&gt;</span>
+    <span style="--line:7">&lt;/head&gt;</span>
+    <span style="--line:8">&lt;body&gt;</span>
+    <span style="--line:9">  &lt;video controls&gt;</span>
+    <span style="--line:10">    &lt;source src="video/face video.mp4"&gt;</span>
+    <span style="--line:11">  &lt;/video&gt;</span>
+    <span style="--line:12">  &lt;audio controls&gt;</span>
+    <span style="--line:13">    &lt;source src="video/dhoni bgm.mp3"&gt;</span>
+    <span style="--line:14">  &lt;/audio&gt;</span>
+    <span style="--line:15">  &lt;img src="images/dhoni-six.jpg"&gt;</span>
+    <span style="--line:16">&lt;/body&gt;</span>
+    <span style="--line:17">&lt;/html&gt;</span>
+  </div>
+
+  <div class="output">
+    <center>
+      <h3>Output</h3>
+
+      <video width="260" height="260" controls>
+        <source src="video/face video.mp4" type="video/mp4">
+      </video>
+
+      <br><br>
+
+      <audio controls>
+        <source src="video/dhoni bgm.mp3" type="audio/mpeg">
+      </audio>
+
+      <br><br>
+
+      <img src="images/dhoni-six.jpg" width="260">
+    </center>
+  </div>
+
+</div>
+
+<div class="explain">
+  <p style="--exp:1">The video tag is used to embed video files in a webpage.</p>
+  <p style="--exp:2">The audio tag is used to play sound files.</p>
+  <p style="--exp:3">The source tag specifies the media file path.</p>
+  <p style="--exp:4">The controls attribute provides play and pause options.</p>
+  <p style="--exp:5">The img tag is used to display images.</p>
+</div>
+
+</body>
+</html>

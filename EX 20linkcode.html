@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+  background:#111;
+  color:white;
+  font-family:monospace;
+  margin:0;
+  padding:20px;
+}
+
+.container{
+  display:flex;
+  gap:20px;
+}
+
+/* CODE AREA */
+.code{
+  width:50%;
+  background:black;
+  padding:15px;
+  border:2px solid lime;
+}
+
+.code span{
+  display:block;
+  opacity:0;
+  color:lime;
+  animation:show 0.4s forwards;
+  animation-delay: calc(var(--line) * 0.3s);
+}
+
+/* OUTPUT AREA */
+.output{
+  width:50%;
+  border:2px solid gold;
+}
+
+/* EXPLANATION */
+.explain{
+  margin-top:20px;
+  background:#222;
+  padding:15px;
+  border-left:5px solid cyan;
+}
+
+.explain p{
+  opacity:0;
+  animation:show 0.4s forwards;
+  animation-delay: calc(var(--exp) * 0.4s);
+}
+
+@keyframes show{
+  from{opacity:0; transform:translateY(-5px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+<body>
+
+<h2>IFRAME Project – Code, Output & Explanation</h2>
+
+<div class="container">
+
+  <!-- CODE -->
+  <div class="code">
+    <span style="--line:1">&lt;!DOCTYPE html&gt;</span>
+    <span style="--line:2">&lt;html&gt;</span>
+    <span style="--line:3">&lt;head&gt;</span>
+    <span style="--line:4">  &lt;title&gt;IFRAME&lt;/title&gt;</span>
+    <span style="--line:5">&lt;/head&gt;</span>
+    <span style="--line:6">&lt;body&gt;</span>
+    <span style="--line:7">  &lt;iframe src="https://www.wikipedia.org/"&gt;</span>
+    <span style="--line:8">  &lt;/iframe&gt;</span>
+    <span style="--line:9">  &lt;a target="IFRAME"&gt;GET IFRAME&lt;/a&gt;</span>
+    <span style="--line:10">&lt;/body&gt;</span>
+    <span style="--line:11">&lt;/html&gt;</span>
+  </div>
+
+  <!-- OUTPUT -->
+<div class="output">
+    <DOCTYPE html>
+    <html>
+    <head>
+       <title>IFRAME</title>
+    </head>
+    <body>
+         <center><h1><b>IFRAME FOR WIKIPEDIA</b></h1>
+              <iframe src="file:///C:/Users/HP/Desktop/HTML%20PROJECT/EXP%202.html" style="border:10px solid gold;width:500px;height:500px;" name="IFRAME"          title="coding website"></iframe></center><br><br>
+         <center><a href="https://www.wikipedia.org/" target="IFRAME">FET IFRAME</a></center>
+    </body>
+    </html>
+</div>
+
+</div>
+
+<!-- EXPLANATION -->
+<div class="explain">
+  <p style="--exp:1">This program demonstrates the use of the iframe tag.</p>
+  <p style="--exp:2">The iframe is used to embed another website inside a webpage.</p>
+  <p style="--exp:3">The src attribute specifies the website to be loaded.</p>
+  <p style="--exp:4">The target attribute loads the link inside the iframe.</p>
+  <p style="--exp:5">CSS is used to style the iframe border and size.</p>
+</div>
+
+</body>
+</html>
